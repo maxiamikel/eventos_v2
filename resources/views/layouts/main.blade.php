@@ -39,15 +39,31 @@
             <li>
                 <a href="/eventos/create" class="nav-link"><ion-icon name="add-outline"></ion-icon> Evento</a>
             </li>
-            <li>
-                <a href="/eventos/listar" class="nav-link"><ion-icon name="receipt-outline"></ion-icon> Eventos</a>
-            </li>
-            <li>
-                <a href="/usuarios" class="nav-link"><ion-icon name="newspaper-outline"></ion-icon> Usuarios</a>
-            </li>
-            <li>
-                <a href="/" class="nav-link"><ion-icon name="person-add-outline"></ion-icon> Usuario</a>
-            </li>
+            
+            @auth
+                <li>
+                    <a href="/eventos/listar" class="nav-link"><ion-icon name="receipt-outline"></ion-icon> Eventos</a>
+                </li>
+                <li>
+                    <a href="/usuarios" class="nav-link"><ion-icon name="newspaper-outline"></ion-icon> Usuarios</a>
+                </li>
+                <li>
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <a href="/logout" class="nav-link"
+                            onclick="event.preventDefault();
+                                this.closest('form').submit();">Logout</a>
+                    </form>
+                </li>
+            @endauth
+           @guest
+                <li>
+                    <a href="/register" class="nav-link"><ion-icon name="person-add-outline"></ion-icon> Usuario</a>
+                </li>
+                <li>
+                    <a href="/login" class="nav-link"><ion-icon name="log-in-outline"></ion-icon> Login</a>
+                </li>
+           @endguest
         </ul>
       </nav>
     </header>
