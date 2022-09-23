@@ -1,0 +1,205 @@
+body {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: solid 1px #ddd;
+}
+
+.row {
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.btn-primary {
+    border: 2px solid #999;
+    color: #333;
+}
+
+.btn-primary:hover {
+    background-color: #eee;
+    border: 2px solid #F2A340;
+    color: #333;
+}
+
+.banner-ing {
+    width: 100%;
+    height: 60vh;
+}
+
+#navbar img {
+    width: 40px;
+}
+
+#navbar {
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px 0;
+}
+
+#navbar a {
+    font-size: 14px;
+    color: #757575;
+}
+
+#navbar a:hover {
+    color: #F2A339;
+}
+
+#logo {
+    color: #F2A340;
+    font-size: 34px;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    color: #F2A340;
+    font-size: 34px;
+    padding: 0;
+    margin: 0;
+}
+
+#search-container {
+    background-image: url("../images/im3.png");
+    background-size: cover;
+    text-align: center;
+    padding: 50px;
+    background-position: center;
+    height: 350px;
+}
+
+#search-container h2 {
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#card-container {
+    display: flex;
+}
+
+#card-container .card {
+    flex: 1 1 0;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px;
+}
+
+#card-container #card img {
+    max-height: 150px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom: solid 2px #C3E6CB;
+}
+
+.card-body .card-date {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.card-body .card-title {
+    font-size: 16px;
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.custo {
+    color: #F2A339;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.endereco-evento {
+    color: #757575;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.endereco-evento a {
+    color: #757575;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: lowercase;
+}
+
+ion-icon {
+    color: #F2A340;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: -5px;
+}
+
+.btn ion-icon {
+    color: #F2A340;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: -2px;
+}
+
+.form-group label {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-group #btn {
+    margin-top: 20px;
+}
+
+.msg {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+footer {
+    background-color: #353E50;
+    text-align: center;
+    color: #FFF;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/*Show*/
+
+#image-container,
+#show-info {
+    margin-top: 2px;
+}
+
+#image-container img {
+    border-radius: 10px;
+}
+
+#itens-list {
+    list-style: none;
+    padding-left: 0;
+}
