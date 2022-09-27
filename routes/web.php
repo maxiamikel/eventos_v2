@@ -6,10 +6,11 @@ use \App\Http\Controllers\EventoController;
 
 
 Route::get('/',[EventoController::class,'index' ]);
-Route::get('/eventos/create',[EventoController::class,'create']);
+Route::get('/eventos/create',[EventoController::class,'create'])->middleware('auth');
 Route::get('/eventos/{id}',[EventoController::class,'show']);
 Route::get('/reservas/{id}',[EventoController::class,'reservar']);
 Route::post('/eventos',[EventoController::class,'store']);
+Route::get('/eventos/{id}',[EventoController::class, 'getEventsUser']);
 
 Route::middleware([
     'auth:sanctum',

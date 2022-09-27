@@ -35,14 +35,12 @@
              <li>
                 <a href="/" class="nav-link"><ion-icon name="home-outline"></ion-icon> Home</a>
             </li>
-                        
-            <li>
-                <a href="/eventos/create" class="nav-link"><ion-icon name="add-outline"></ion-icon> Evento</a>
-            </li>
-            
-            @auth
+             @auth           
                 <li>
-                    <a href="/eventos/listar" class="nav-link"><ion-icon name="receipt-outline"></ion-icon> Eventos</a>
+                    <a href="/eventos/create" class="nav-link"><ion-icon name="add-outline"></ion-icon> Evento</a>
+                </li>
+                <li>
+                    <a href="/eventos/dashboard" class="nav-link"><ion-icon name="receipt-outline"></ion-icon> Meus eventos</a>
                 </li>
                 <li>
                     <a href="/usuarios" class="nav-link"><ion-icon name="newspaper-outline"></ion-icon> Usuarios</a>
@@ -57,9 +55,6 @@
                 </li>
             @endauth
            @guest
-                <li>
-                    <a href="/register" class="nav-link"><ion-icon name="person-add-outline"></ion-icon> Usuario</a>
-                </li>
                 <li>
                     <a href="/login" class="nav-link"><ion-icon name="log-in-outline"></ion-icon> Login</a>
                 </li>

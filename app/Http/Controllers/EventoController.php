@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Evento;
 use App\Models\Endereco;
+use App\Models\User;
 
 class EventoController extends Controller
 {
@@ -43,6 +44,8 @@ class EventoController extends Controller
         $evento->data_publicacao = $request->txtDataPublicacao;
         $evento->data_evento = $request->txtDateEvento;
         $evento->hora_evento = $request->txtHoraEvento;
+        $user = auth()->user();
+        $evento->id_user = $user->id;
         if($request->hasFile('caricatura') && $request->file('caricatura')->isValid())
         {
             $requestCaricatura = $request->caricatura;
@@ -59,9 +62,17 @@ class EventoController extends Controller
     public function show($id)
     {
         $evento = Evento::findOrFail($id);
+        $userEvento = User::where('id', $evento->id_user)->first()->toArray();
         $idEndereco = $evento->id_endereco;
         $endereco = Endereco::findOrFail($idEndereco);
-        return view('eventos.show', ['evento' => $evento, 'endereco'=> $endereco]);
+        return view('eventos.show', ['evento' => $evento, 'endereco'=> $endereco,'userEvento'=>$userEvento]);
+    }
+
+    public function getEventsUser()
+    {
+        $user = auth()->user();
+        $eventos = $user->eventos;
+        return view('eventos.dashboard',['eventos' => $eventos]);
     }
 
     public function reservar($id)

@@ -10,4 +10,8 @@ class Evento extends Model
     use HasFactory;
 
     protected $dates = ['data_evento'];
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

@@ -32,6 +32,7 @@
                         <span class="status1"> Aberto</span>
                     @endif
             </p>
+            <p>Publicado por: {{$userEvento['name']}}</p>
             
             <div class="col-md-6" id="col-md-6">
                 @if($evento->num_convidado > $evento->vendido)
